@@ -6,23 +6,51 @@ __pycache__/
 .Python
 env/
 venv/
+ENV/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
 
 # Jupyter
 .ipynb_checkpoints/
 *.ipynb_checkpoints
+*checkpoint*
 
 # Spark
 spark-warehouse/
 *.log
+metastore_db/
+.spark-*
+*.pyc
 
 # IDE
 .vscode/
 .idea/
 *.swp
-
-# OS
+*.swo
+*~
 .DS_Store
 Thumbs.db
 
-# Données volumineuses (optionnel)
-# data/
+# Data files (optionnel - commenter si tu veux les inclure)
+# *.csv
+# *.parquet
+# *.json
+
+# Résultats temporaires
+__pycache__/
+.pytest_cache/
+.coverage
+htmlcov/
