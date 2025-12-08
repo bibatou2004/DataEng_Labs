@@ -1,0 +1,33 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+dist/
+build/
+venv/
+env/
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb_*
+
+# Spark
+metastore_db/
+.sparkStaging/
+*.log
+
+# Données (trop volumineuses)
+donnees/entrees/*.csv
+donnees/sorties/
+*.parquet
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+.env
