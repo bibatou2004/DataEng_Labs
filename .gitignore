@@ -1,0 +1,41 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+*.egg-info/
+dist/
+build/
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb~
+.ipython/
+
+# Spark
+metastore_db/
+.sparkStaging/
+*.log
+derby.log
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*.sublime-*
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Data (optionnel - commente pour inclure)
+# data/
+# outputs/
+
+# Large files
+*.parquet
+*.csv.gz
