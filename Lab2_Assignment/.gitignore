@@ -17,11 +17,6 @@ metastore_db/
 .sparkStaging/
 *.log
 
-# Données (trop volumineuses)
-donnees/entrees/*.csv
-donnees/sorties/
-*.parquet
-
 # IDE
 .vscode/
 .idea/
@@ -31,3 +26,8 @@ donnees/sorties/
 # OS
 .DS_Store
 .env
+
+# Optionnel: ignoré SEULEMENT les fichiers volumineux
+# Garde les données pour reproducibilité
+# donnees/entrees/*.csv
+# donnees/sorties/
