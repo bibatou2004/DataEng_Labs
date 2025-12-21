@@ -1,0 +1,41 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb~
+
+# Spark
+metastore_db/
+*.log
+derby.log
+warehouse/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Data (except examples)
+donnees/bronze/
+donnees/silver/
+donnees/gold/
+donnees/sorties/
+*.tmp
+*.parquet
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Config
+config.local.yaml
