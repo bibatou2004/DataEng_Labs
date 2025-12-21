@@ -1,0 +1,4 @@
+{"order_id": 1001, "user_id": 1, "product_id": 101, "quantity": 1, "date": "2024-01-15"}
+{"order_id": 1002, "user_id": 2, "product_id": 102, "quantity": 2, "date": "2024-01-16"}
+{"order_id": 1003, "user_id": 1, "product_id": 105, "quantity": 1, "date": "2024-01-17"}
+{"order_id": 1004, "user_id": 3, "product_id": 103, "quantity": 3, "date": "2024-01-18"}
