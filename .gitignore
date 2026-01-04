@@ -1,0 +1,28 @@
+cat <<EOF > .gitignore
+# --- DATA & OUTPUTS (Ne jamais envoyer sur GitHub) ---
+data/
+outputs/
+*.parquet
+*.gz
+
+
+# --- ARCHIVES ---
+*.zip
+*.tar
+*.rar
+
+# --- PYTHON & NOTEBOOKS ---
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# --- ENVIRONNEMENTS ---
+env/
+venv/
+miniconda3/
+.conda/
+
+# --- SYSTEME & IDE ---
+.DS_Store
+.vscode/
+EOF

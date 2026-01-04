@@ -1,0 +1,4 @@
+run_1,2026-01-03 18:28:02,bronze,ingest_csv_to_parquet,64.1,0,35605767,Raw TSV to Bronze
+run_1,2026-01-03 18:28:02,silver,clean_and_cast,10.9,35605767,35605763,Cast n to Int & DropNulls
+run_1,2026-01-03 18:35:10,gold,q1_baseline_aggregation,9.44,0,0,Shuffle Default (200)
+run_1,2026-01-03 18:35:10,gold,q1_optimized_aggregation,5.38,0,0,Shuffle Tuned (12)
