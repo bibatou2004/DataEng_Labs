@@ -1,5 +1,5 @@
 cat <<EOF > .gitignore
-# --- DATA & OUTPUTS (Ne jamais envoyer sur GitHub) ---
+# --- DATA & OUTPUTS  ---
 data/
 outputs/
 *.parquet
@@ -26,3 +26,54 @@ miniconda3/
 .DS_Store
 .vscode/
 EOF
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+*.egg-info/
+dist/
+build/
+
+# Jupyter
+.ipynb_checkpoints
+*.ipynb_checkpoints
+
+# Spark
+metastore_db/
+warehouse/
+spark-warehouse/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Data
+data/
+!output/
+
+# Logs
+*.log
+logs/
+
+# Temporary
+*.tmp
+temp/
+
+# Node
+node_modules/
+npm-debug.log
+
+# Environment
+.env
+.env.local
