@@ -1,0 +1,51 @@
+=== PLAN AFTER OPTIMIZATION (Repartitioned) ===
+
+== Physical Plan ==
+AdaptiveSparkPlan (8)
++- == Final Plan ==
+   ResultQueryStage (6)
+   +- ShuffleQueryStage (5), Statistics(sizeInBytes=2.5 MiB, rowCount=1.00E+4)
+      +- Exchange (4)
+         +- * Project (3)
+            +- * Project (2)
+               +- * Scan ExistingRDD (1)
++- == Initial Plan ==
+   Exchange (7)
+   +- Project (3)
+      +- Project (2)
+         +- Scan ExistingRDD (1)
+
+
+(1) Scan ExistingRDD [codegen id : 1]
+Output [6]: [id#461, feature_0#462, feature_1#463, feature_2#464, feature_3#465, feature_4#466]
+Arguments: [id#461, feature_0#462, feature_1#463, feature_2#464, feature_3#465, feature_4#466], MapPartitionsRDD[118] at applySchemaToPythonRDD at NativeMethodAccessorImpl.java:0, ExistingRDD, UnknownPartitioning(0)
+
+(2) Project [codegen id : 1]
+Output [7]: [id#461, feature_0#462, feature_1#463, feature_2#464, feature_3#465, feature_4#466, UDF(struct(feature_0, feature_0#462, feature_1, feature_1#463, feature_2, feature_2#464, feature_3, feature_3#465, feature_4, feature_4#466)) AS features_raw#494]
+Input [6]: [id#461, feature_0#462, feature_1#463, feature_2#464, feature_3#465, feature_4#466]
+
+(3) Project [codegen id : 1]
+Output [8]: [id#461, feature_0#462, feature_1#463, feature_2#464, feature_3#465, feature_4#466, features_raw#494, UDF(features_raw#494) AS features#563]
+Input [7]: [id#461, feature_0#462, feature_1#463, feature_2#464, feature_3#465, feature_4#466, features_raw#494]
+
+(4) Exchange
+Input [8]: [id#461, feature_0#462, feature_1#463, feature_2#464, feature_3#465, feature_4#466, features_raw#494, features#563]
+Arguments: hashpartitioning(id#461, 32), REPARTITION_BY_NUM, [plan_id=1628]
+
+(5) ShuffleQueryStage
+Output [8]: [id#461, feature_0#462, feature_1#463, feature_2#464, feature_3#465, feature_4#466, features_raw#494, features#563]
+Arguments: 0
+
+(6) ResultQueryStage
+Output [8]: [id#461, feature_0#462, feature_1#463, feature_2#464, feature_3#465, feature_4#466, features_raw#494, features#563]
+Arguments: 1
+
+(7) Exchange
+Input [8]: [id#461, feature_0#462, feature_1#463, feature_2#464, feature_3#465, feature_4#466, features_raw#494, features#563]
+Arguments: hashpartitioning(id#461, 32), REPARTITION_BY_NUM, [plan_id=1617]
+
+(8) AdaptiveSparkPlan
+Output [8]: [id#461, feature_0#462, feature_1#463, feature_2#464, feature_3#465, feature_4#466, features_raw#494, features#563]
+Arguments: isFinalPlan=true
+
+

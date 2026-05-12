@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 cat <<EOF > .gitignore
 # --- DATA & OUTPUTS  ---
 data/
@@ -26,6 +27,8 @@ miniconda3/
 .DS_Store
 .vscode/
 EOF
+=======
+>>>>>>> 6d0f059 (Initial commit: Data Engineering 2 Labs (Lab1-3))
 # Python
 __pycache__/
 *.py[cod]
@@ -39,10 +42,18 @@ dist/
 build/
 
 # Jupyter
+<<<<<<< HEAD
 .ipynb_checkpoints
 *.ipynb_checkpoints
 
 # Spark
+=======
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# Spark
+*.log
+>>>>>>> 6d0f059 (Initial commit: Data Engineering 2 Labs (Lab1-3))
 metastore_db/
 warehouse/
 spark-warehouse/
@@ -52,12 +63,16 @@ spark-warehouse/
 .idea/
 *.swp
 *.swo
+<<<<<<< HEAD
 *~
+=======
+>>>>>>> 6d0f059 (Initial commit: Data Engineering 2 Labs (Lab1-3))
 
 # OS
 .DS_Store
 Thumbs.db
 
+<<<<<<< HEAD
 # Data
 data/
 !output/
@@ -77,3 +92,14 @@ npm-debug.log
 # Environment
 .env
 .env.local
+=======
+# Data files (optional)
+data/*.csv
+data/*.parquet
+outputs/*
+proof/*
+
+# Sensitive
+.env
+*.key
+>>>>>>> 6d0f059 (Initial commit: Data Engineering 2 Labs (Lab1-3))
