@@ -1,105 +1,35 @@
-<<<<<<< HEAD
-cat <<EOF > .gitignore
-# --- DATA & OUTPUTS  ---
-data/
+# ===== SPARK / HADOOP =====
 outputs/
+data/
 *.parquet
-*.gz
+*.delta
+*.checkpoint
+metastore_db/
+spark-warehouse/
+.spark-*
 
-
-# --- ARCHIVES ---
-*.zip
-*.tar
-*.rar
-
-# --- PYTHON & NOTEBOOKS ---
-__pycache__/
-*.pyc
-.ipynb_checkpoints/
-
-# --- ENVIRONNEMENTS ---
-env/
-venv/
-miniconda3/
-.conda/
-
-# --- SYSTEME & IDE ---
-.DS_Store
-.vscode/
-EOF
-=======
->>>>>>> 6d0f059 (Initial commit: Data Engineering 2 Labs (Lab1-3))
-# Python
+# ===== PYTHON =====
 __pycache__/
 *.py[cod]
-*$py.class
-*.so
-.Python
-env/
-venv/
 *.egg-info/
 dist/
 build/
+.env
+venv/
 
-# Jupyter
-<<<<<<< HEAD
-.ipynb_checkpoints
-*.ipynb_checkpoints
-
-# Spark
-=======
+# ===== JUPYTER =====
 .ipynb_checkpoints/
-*.ipynb_checkpoints
 
-# Spark
-*.log
->>>>>>> 6d0f059 (Initial commit: Data Engineering 2 Labs (Lab1-3))
-metastore_db/
-warehouse/
-spark-warehouse/
-
-# IDE
+# ===== IDE =====
 .vscode/
 .idea/
-*.swp
-*.swo
-<<<<<<< HEAD
-*~
-=======
->>>>>>> 6d0f059 (Initial commit: Data Engineering 2 Labs (Lab1-3))
 
-# OS
-.DS_Store
-Thumbs.db
-
-<<<<<<< HEAD
-# Data
-data/
-!output/
-
-# Logs
+# ===== LOGS =====
 *.log
-logs/
 
-# Temporary
-*.tmp
-temp/
-
-# Node
+# ===== NODE =====
 node_modules/
-npm-debug.log
-
-# Environment
-.env
-.env.local
-=======
-# Data files (optional)
-data/*.csv
-data/*.parquet
-outputs/*
-proof/*
-
-# Sensitive
-.env
-*.key
->>>>>>> 6d0f059 (Initial commit: Data Engineering 2 Labs (Lab1-3))
+package-lock.json
+package.json
+Presntationclaude2.js
+present.js
