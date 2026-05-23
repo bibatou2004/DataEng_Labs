@@ -7,7 +7,7 @@ Parquet Size: 1.51 KB
 CSV Size: 0.57 KB
 Compression Ratio: 0.38x
 
-Average Query Latency: 242.85 ms
+Average Query Latency: 183.70 ms
 
 Top Tokens:
   1. esports: freq=5, docs=5
